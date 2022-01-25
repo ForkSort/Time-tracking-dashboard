@@ -40,7 +40,7 @@ class App {
         // create the menu, profile and nav
         const menuElements = this.createElement("div", {className: "menu"},[ // menu-wrapper
             ["div", {className: "profile"}, [ // profile-wrapper
-                ["img", {src: this.profileImageUrl}],
+                ["img", {src: this.profileImageUrl, alt: "Profile image"}],
                 ["div", {}, [ // profile-text-wrapper
                     ["p", {textContent: "Report for"}], // profile-text-label
                     ["h3", {textContent: this.profileName}] // profile-text-title
