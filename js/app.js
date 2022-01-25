@@ -126,6 +126,6 @@ class App {
 }
 const app = new App({
     profileName: "Jeremy Robson",
-    profileImageUrl: "/images/image-jeremy.png",
+    profileImageUrl: "images/image-jeremy.png",
     dataUrl: "./data.json"
 });
