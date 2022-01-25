@@ -17,10 +17,10 @@ class App {
         // store data in scheduleData
         this.scheduleData;
         // bind this-instance to methods we use as callback inside an async method
-        this.render = this.render.bind(this);
-        this.createElements = this.createElements.bind(this);
+        this.renderSchedule = this.renderSchedule.bind(this);
+        this.createInitialElements = this.createInitialElements.bind(this);
         // fetch json-data, then create the app-components
-        this.fetchData(this.createElements);
+        this.fetchData(this.createInitialElements);
     }
     /**
      * Fetches scheduleData from this.dataUrl
@@ -33,9 +33,9 @@ class App {
         callback();
     }
     /**
-     * Creates app-components
+     * Creates the initial app-elements, and initiates event-listeners
      */
-    createElements() {
+    createInitialElements() {
         const fragment = document.createDocumentFragment();
         // create the menu, profile and nav
         const menuElements = this.createElement("div", {className: "menu"},[ // menu-wrapper
@@ -54,7 +54,7 @@ class App {
         ]); // end menu
 
         fragment.appendChild(menuElements); // append menu-components to fragment
-        this.scheduleContainer = this.render();
+        this.scheduleContainer = this.renderSchedule();
         fragment.appendChild(this.scheduleContainer); // append schedule-components to fragment
         this.appContainer.appendChild(fragment); // append fragment to the DOM, and update this.scheduleContainer
         // attach event listeners to the nav-buttons
@@ -63,9 +63,9 @@ class App {
             weekly: document.querySelector(".btn-weekly"),
             monthly: document.querySelector(".btn-monthly")
         }
-        this.buttons.daily.addEventListener("click", this.render);
-        this.buttons.weekly.addEventListener("click", this.render);
-        this.buttons.monthly.addEventListener("click", this.render);
+        this.buttons.daily.addEventListener("click", this.renderSchedule);
+        this.buttons.weekly.addEventListener("click", this.renderSchedule);
+        this.buttons.monthly.addEventListener("click", this.renderSchedule);
     }
     /**
      * Parses parameters through document.createElement, and returns a DOM (if children param is specified, then with the children appended).
@@ -89,7 +89,7 @@ class App {
      * @param {object} interval DOM-element, this is automatically passed from menu-button-eventlisteners
      * @returns 
      */
-    render(interval = "weekly") {
+    renderSchedule(interval = "weekly") {
         let previousPeriodText = "Last week";
         if (interval != "weekly") {
             this.buttons.daily.classList.remove("active");
