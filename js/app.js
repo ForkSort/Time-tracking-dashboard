@@ -46,7 +46,7 @@ class App {
                     ["h3", {textContent: this.profileName}] // profile-text-title
                 ]] // end profile-text-wrapper
             ]], // end profile-wrapper
-            ["div", {className: "nav"}, [ // nav-wrapper
+            ["nav", {className: "nav"}, [ // nav-wrapper
                 ["button", {className: "btn-daily", textContent: "Daily"}],
                 ["button", {className: "btn-weekly active", textContent: "Weekly"}],
                 ["button", {className: "btn-monthly", textContent: "Monthly"}]
