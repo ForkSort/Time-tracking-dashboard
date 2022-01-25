@@ -1,0 +1,307 @@
+:root {
+    --color-darkblue: hsl(235, 46%, 20%);
+    --color-grey: hsl(235, 25%, 80%);
+}
+* {
+    margin-inline: 0;
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: 'Rubik', sans-serif;
+    font-size: 18px;
+    color: white;
+    background-color:hsl(226, 43%, 10%);
+}
+.app {
+    transition: ease all .5s;
+    width: 93.5vw;
+    margin-top: 18.25vw;
+    margin-inline: auto;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+div {
+    border-radius: 4vw;
+}
+/* ============================
+        Profile & Navigation
+   ============================ */
+.menu {
+    background-color: var(--color-darkblue);
+    width: 100%;
+    margin: 3.5vw 3.15vw;
+}
+.profile {
+    padding: 8.35vw;
+    background-color: hsl(246, 80%, 60%);
+    display: flex;
+}
+.profile > div {
+    padding: 1.5vw 0 1.5vw 4.5vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.profile img {
+    flex-shrink: 0;
+    width: 26.25%;
+    border: 3px solid white;
+    border-radius: 50%;
+    margin-left: -0.5vw;
+}
+.profile h3 {
+    font-weight: 300;
+    font-size: 6.4vw;
+    word-wrap: break-word;
+    margin: 0;
+    letter-spacing: 0.025vw;
+}
+.profile p {
+    color: var(--color-grey);
+    font-size: 4vw;
+    margin: 0;
+}
+.nav {
+    display: flex;
+    justify-content: space-between;
+    margin: 6.25vw 2vw 0 2vw;
+    padding: 0 0 6.25vw;
+}
+button {
+    font-size: 5vw;
+    color: hsl(235, 45%, 61%);
+    font-family: inherit;
+    letter-spacing: -0.1vw;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 0;
+    min-width: 30%;
+}
+button:hover,
+button:focus,
+button:active {
+    outline: none;
+    color: white;
+}
+.active {
+    color: white;
+}
+/* ============================
+    Schedule & its components
+   ============================ */
+.schedule {
+    display: flex;
+    flex-flow: row wrap;
+}
+.schedule-item {
+    margin: 3.175vw 3.15vw;
+    background-position: right 7% top -12%;
+    background-size: 23.75%;
+    background-repeat: no-repeat;
+    width: 100%;
+}
+.schedule-item > div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 10vw;
+    background-color: var(--color-darkblue);
+    padding: 7.5vw 6.5vw;
+    align-items: center;
+}
+.schedule-item > div:hover {
+    background-color: hsl(235.8, 40.6%, 34.3%);
+    cursor: pointer;
+}
+span {
+    font-weight: 500;
+    flex-basis: 50%;
+    margin-bottom: 0.45em;
+}
+.schedule-item span {
+    font-size: 4.875vw;
+    margin-bottom: 1.7vw;
+}
+.schedule-item h3 {
+    font-size: 8.5vw;
+    font-weight: 300;
+    margin: 0;
+    letter-spacing: 0;
+    flex-basis: 40%;
+}
+.schedule-item span:nth-child(2) {
+    text-align: right;
+    font-size: 5.875vw;
+    line-height: 0;
+    margin-right: -0.75vw;
+    color: var(--color-grey);
+}
+.schedule-item span:nth-child(2):hover {
+    cursor: pointer;
+    color: white;
+}
+.schedule-item p {
+    color: var(--color-grey);
+    margin: 0;
+    font-size: 4vw;
+}
+/* =================================
+    Component icons and backgrounds
+   ================================= */
+#work {
+    background-color: hsl(15, 100%, 70%);
+    background-image:url("/images/icon-work.svg");
+}
+#play {
+    background-color: hsl(195, 74%, 62%);
+    background-image:url("/images/icon-play.svg");
+    background-position: right 8% top -7%;
+}
+#study {
+    background-color: hsl(348, 100%, 68%);
+    background-image:url("/images/icon-study.svg");
+    background-position: right 7% top -9%;
+}
+#exercise {
+    background-color: hsl(145, 58%, 55%);
+    background-image:url("/images/icon-exercise.svg");
+    background-position: right 7% top -1%;
+    background-size: 24.5%;
+}
+#social {
+    background-color: hsl(264, 64%, 52%);
+    background-image:url("/images/icon-social.svg");
+    background-size: 23.5%;
+    background-position: right 4.75% top -28%;
+}
+#self-care {
+    background-color: hsl(43, 84%, 65%);
+    background-image:url("/images/icon-self-care.svg");
+    background-position: right 6% top -11%;
+    background-size: 20%;
+}
+@media (min-width: 1152px) and (orientation: landscape) {
+    .app {
+        transition: ease all .5s;
+        width: max(80%, 1152px);
+        padding-left: 1.5%;
+        margin-inline: auto;
+        margin-top: 17.6vw;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        gap: 1.65em;
+        align-items: flex-start;
+    }
+    div {
+        border-radius: 1vw;
+    }
+    /* ============================
+           Profile & Navigation
+       ============================ */
+    .menu {
+        margin: 0;
+        max-width: 22.5%;
+    }
+    .profile {
+        padding: 1.85em 1.75em 4.25em;
+        flex-direction: column;
+    }
+    .profile img {
+        width: min(44%, 84.1833px);
+        margin-left: -0.2em;
+    }
+    .profile > div {
+        margin-top: 2.2em;
+        padding: 0;
+    }
+    .profile p {
+        font-size: 0.94rem;
+    }
+    .profile h3 {
+        font-size: 2.5rem;
+        margin: 0.075em 0px;
+        line-height: 3rem;
+        letter-spacing: 0;
+    }
+    .nav {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.35rem;
+        margin: 1.4em 1.725em;
+        padding: 0px 0px 0.35em;
+    }
+    .nav button {
+        font-size: 1.1rem;
+        letter-spacing: 0.025rem;
+        text-align: left;
+    }
+    .nav ul > li {
+        text-align: left;
+        font-size: 1.1rem;
+        letter-spacing: unset;
+    }
+    /* ============================
+        Schedule & its components
+       ============================ */
+    .schedule {
+        gap: 1.65em;  
+    }
+    .schedule-item {
+        margin: 0 0;
+        flex-basis: 30.125%;
+        min-width: 254.967px;
+        max-width: 423px;
+        max-height: 20%;
+        background-size: 31%;
+        background-position: right 17px top -11px;
+    }
+    .schedule-item > div {
+        margin-top: 2.5em;
+        padding: 1.575em 1.675em;
+
+    }
+    .schedule-item span {
+        font-size: 1.125rem;
+        margin-bottom: 1.4em;
+    }
+    .schedule-item span:nth-child(2) {
+        font-size: 1.2rem;
+        margin-right: -1px;
+    }
+    .schedule-item h3 {
+        font-size: 3.5rem;
+        flex-basis: 100%;
+    }
+    .schedule-item p {
+        font-size: 1rem;
+        margin: 0.5em 0 0.2em;
+        letter-spacing: -0.03em;
+    }
+    /* =================================
+        Component icons and backgrounds
+       ================================= */
+    #play {
+        background-position: right 20px top -6px;
+        background-size: 30%;
+    }
+    #study {
+        background-position: right 16px top -8px;
+    }
+    #exercise {
+        background-position: right 17px top -1px;
+        background-size: 31.25%;
+    }
+    #social {
+        background-size: 29%;
+        background-position: right 13px top -14px;
+    }
+    #self-care {
+        background-position: right 15px top -10px;
+        background-size: 26%;
+    }
+}
