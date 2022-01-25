@@ -40,7 +40,7 @@ Users should be able to:
 I decided to use just vanilla: HTML, CSS (flexbox) and Javascript. 
 Once i setup the basic mobile and then desktop skeletons i added colors, images and then found a decent balance between pixel-perfect offsets/size and least possible (while readable) css-code. Finally, to make this challenge a little more interesting i commented out all contents of the html body, and started planning the Javascript, i had a simple plan: dynamically render all html-content without using innerHTML or any frameworks/libraries. 
 
-I've tried to name variables, properties and methods by their behaviour, so that comments should only be necessary to describe not-so-obvious-logic/nesting. I've used JSDoc standard for JS-comments (to best of my ability). An example comment:
+I've tried to name variables, properties and methods by their behaviour, so that comments should only be necessary to describe not-so-obvious-logic/nesting. I've used JSDoc standard for JS-comments (to best of my ability).
 
 ### What I learned
 
