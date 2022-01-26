@@ -27,8 +27,7 @@ Users should be able to:
 
 ### Screenshots
 
-![fmtt-mobile](https://user-images.githubusercontent.com/95124571/151046406-52e38d99-e8fe-45e0-82d1-33ef1936db36.png) 
-![fmtt-desktop](https://user-images.githubusercontent.com/95124571/151046567-d0ea3874-0dca-4894-b9b8-b40193efec96.png)
+<img src="https://user-images.githubusercontent.com/95124571/151046406-52e38d99-e8fe-45e0-82d1-33ef1936db36.png" width="192" height="512"> <img src="https://user-images.githubusercontent.com/95124571/151046567-d0ea3874-0dca-4894-b9b8-b40193efec96.png" width="768" height="512">
 
 ### Demo
 
