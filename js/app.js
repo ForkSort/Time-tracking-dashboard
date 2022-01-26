@@ -43,7 +43,7 @@ class App {
                 ["img", {src: this.profileImageUrl, alt: "Profile image"}],
                 ["div", {}, [ // profile-text-wrapper
                     ["p", {textContent: "Report for"}], // profile-text-label
-                    ["h3", {textContent: this.profileName}] // profile-text-title
+                    ["h1", {textContent: this.profileName}] // profile-text-title
                 ]] // end profile-text-wrapper
             ]], // end profile-wrapper
             ["nav", {className: "nav"}, [ // nav-wrapper
