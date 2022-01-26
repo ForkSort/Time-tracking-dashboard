@@ -27,7 +27,8 @@ Users should be able to:
 
 ### Screenshots
 
-<img src="https://user-images.githubusercontent.com/95124571/151046406-52e38d99-e8fe-45e0-82d1-33ef1936db36.png" width="192" height="512"><img src="https://user-images.githubusercontent.com/95124571/151046567-d0ea3874-0dca-4894-b9b8-b40193efec96.png" width="768" height="512">
+![ttanim(1)](https://user-images.githubusercontent.com/95124571/151228872-63b68c75-d69e-4211-b5a5-bb41354d74f4.gif)
+
 
 ### Demo
 
