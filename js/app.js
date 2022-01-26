@@ -112,7 +112,7 @@ class App {
         }
         for (let schedule of this.scheduleData) {
             if (this.scheduleContainer) { // if scheduleContainer has items: update the schedule-components
-                this.scheduleComponents[schedule.title].querySelector("h3").textContent = displayHours(schedule.timeframes[interval].current);
+                this.scheduleComponents[schedule.title].querySelector("h2").textContent = displayHours(schedule.timeframes[interval].current);
                 this.scheduleComponents[schedule.title].querySelector("p").textContent = `${previousPeriodText} - ${displayHours(schedule.timeframes[interval].previous)}`; 
             }
             else { // create the schedule-components
@@ -122,7 +122,7 @@ class App {
                         ["div", {}, [ // schedule-item-wrapper
                             ["span", {textContent: schedule.title}],
                             ["span", {textContent: "•••"}],
-                            ["h3", {textContent: displayHours(schedule.timeframes[interval].current)}],
+                            ["h2", {textContent: displayHours(schedule.timeframes[interval].current)}],
                             ["p", {textContent: `${previousPeriodText} - ${displayHours(schedule.timeframes[interval].previous)}`}]
                         ]] // end schedule-item-wrapper
                     ]);
