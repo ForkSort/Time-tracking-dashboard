@@ -31,7 +31,7 @@ Users should be able to:
 
 ### Demo
 
-- Solution URL: [Add solution URL here](https://www.frontendmentor.io/solutions/time-tracking-dashboard-using-only-vanilla-cssflexbox-html-js-QFITjKNPV)
+- Solution URL: [See solution @ FrontendMentor](https://www.frontendmentor.io/solutions/time-tracking-dashboard-using-only-vanilla-cssflexbox-html-js-QFITjKNPV)
 - Live Site URL: [Click to open](https://forksort.github.io/Time-tracking-dashboard/)
 
 ## My process
