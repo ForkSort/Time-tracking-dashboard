@@ -100,10 +100,20 @@ class App {
             if (interval === "daily") previousPeriodText = "Yesterday";
             else if (interval === "monthly") previousPeriodText = "Last Month";
         }
+        /**
+         * Takes param hours and returns it as a readable string, ie: displayHours(0): "None", displayHours(1): "1hr", displayHours(12): "12hrs"
+         * @param {number} hours input hours
+         * @returns hours + hr/hrs or None
+         */
+        const displayHours = function(hours) {
+            if (!hours) return "None";
+            else if (hours === 1) return `${hours}hr`;
+            else return `${hours}hrs`;
+        }
         for (let schedule of this.scheduleData) {
             if (this.scheduleContainer) { // if scheduleContainer has items: update the schedule-components
-                this.scheduleComponents[schedule.title].querySelector("h3").textContent = `${schedule.timeframes[interval].current}hrs`;
-                this.scheduleComponents[schedule.title].querySelector("p").textContent = `${previousPeriodText} - ${schedule.timeframes[interval].previous}hrs`;  
+                this.scheduleComponents[schedule.title].querySelector("h3").textContent = displayHours(schedule.timeframes[interval].current);
+                this.scheduleComponents[schedule.title].querySelector("p").textContent = `${previousPeriodText} - ${displayHours(schedule.timeframes[interval].previous)}`; 
             }
             else { // create the schedule-components
                 const scheduleContainer = this.createElement("div", {className: "schedule"}); // schedule-wrapper
@@ -112,8 +122,8 @@ class App {
                         ["div", {}, [ // schedule-item-wrapper
                             ["span", {textContent: schedule.title}],
                             ["span", {textContent: "•••"}],
-                            ["h3", {textContent: `${schedule.timeframes[interval].current}hrs`}],
-                            ["p", {textContent: `${previousPeriodText} - ${schedule.timeframes[interval].previous}hrs`}]
+                            ["h3", {textContent: displayHours(schedule.timeframes[interval].current)}],
+                            ["p", {textContent: `${previousPeriodText} - ${displayHours(schedule.timeframes[interval].previous)}`}]
                         ]] // end schedule-item-wrapper
                     ]);
                     this.scheduleComponents[schedule.title] = scheduleElement; // append this component into scheduleComponents-object
