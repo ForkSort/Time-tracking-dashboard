@@ -127,7 +127,7 @@ span {
     font-size: 4.875vw;
     margin-bottom: 1.7vw;
 }
-.schedule-item h3 {
+.schedule-item h2 {
     font-size: 8.5vw;
     font-weight: 300;
     margin: 0;
@@ -273,7 +273,7 @@ span {
         font-size: 1.2rem;
         margin-right: -1px;
     }
-    .schedule-item h3 {
+    .schedule-item h2 {
         font-size: 3.5rem;
         flex-basis: 100%;
     }
