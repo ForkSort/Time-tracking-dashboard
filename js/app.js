@@ -90,7 +90,7 @@ class App {
      * @returns 
      */
     renderSchedule(interval = "weekly") {
-        let previousPeriodText = "Last week";
+        let previousPeriodText = "Last Week";
         if (interval != "weekly") {
             this.buttons.daily.classList.remove("active");
             this.buttons.weekly.classList.remove("active");
@@ -98,7 +98,7 @@ class App {
             interval.target.classList.add("active");
             interval = interval.target.textContent.toLowerCase();
             if (interval === "daily") previousPeriodText = "Yesterday";
-            else if (interval === "monthly") previousPeriodText = "Last month";
+            else if (interval === "monthly") previousPeriodText = "Last Month";
         }
         for (let schedule of this.scheduleData) {
             if (this.scheduleContainer) { // if scheduleContainer has items: update the schedule-components
