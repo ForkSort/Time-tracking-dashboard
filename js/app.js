@@ -54,9 +54,9 @@ class App {
         ]); // end menu
 
         fragment.appendChild(menuElements); // append menu-components to fragment
-        this.scheduleContainer = this.renderSchedule();
+        this.scheduleContainer = this.renderSchedule(); // update this.scheduleContainer
         fragment.appendChild(this.scheduleContainer); // append schedule-components to fragment
-        this.appContainer.appendChild(fragment); // append fragment to the DOM, and update this.scheduleContainer
+        this.appContainer.appendChild(fragment); // append fragment to the DOM
         // attach event listeners to the nav-buttons
         this.buttons = {
             daily: document.querySelector(".btn-daily"),
@@ -82,6 +82,7 @@ class App {
         for (const child of children.flat()) {
             createEl.appendChild(this.createElement(...child));
         }
+        
         return createEl;
     }
     /**
@@ -106,9 +107,12 @@ class App {
          * @returns hours + hr/hrs or None
          */
         const displayHours = function(hours) {
-            if (!hours) return "None";
-            else if (hours === 1) return `${hours}hr`;
-            else return `${hours}hrs`;
+            if (!hours) 
+                return "None";
+            else if (hours === 1) 
+                return `${hours}hr`;
+            else 
+                return `${hours}hrs`;
         }
         for (let schedule of this.scheduleData) {
             if (this.scheduleContainer) { // if scheduleContainer has items: update the schedule-components
@@ -129,6 +133,7 @@ class App {
                     this.scheduleComponents[schedule.title] = scheduleElement; // append this component into scheduleComponents-object
                     scheduleContainer.appendChild(scheduleElement);
                 }
+                
                 return scheduleContainer;
             }
         }
